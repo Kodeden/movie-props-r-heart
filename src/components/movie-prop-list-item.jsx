@@ -1,17 +1,17 @@
 import PropTypes from "prop-types";
 
-export default function MoviePropListItem({ movieprop }) {
+export default function MoviePropListItem({ movieProp }) {
   return (
     <li className="py-2 ">
-      {movieprop.id}. {movieprop.name} - {movieprop.createdAt}
+      {movieProp.id}. {movieProp.name} - {movieProp.createdAt}
     </li>
   );
 }
 
 MoviePropListItem.propTypes = {
-  movieprop: PropTypes.shape({
-    id: PropTypes.number.isRequired,
+  movieProp: PropTypes.shape({
+    id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    createAt: PropTypes.string.isRequired,
+    createdAt: PropTypes.string.isRequired,
   }).isRequired,
 };
